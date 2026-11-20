@@ -1,0 +1,2 @@
+ID,Title,Area,Preconditions,Test Data,Steps,Expected Result,Actual Result,Status,Notes
+TC-001,Example: submit a valid contact form,Contact,Contact page is open,Name and valid email,"1. Enter name and email 2. Enter message 3. Submit",A clear confirmation is shown,,,,
