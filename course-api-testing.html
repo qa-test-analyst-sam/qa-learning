@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A practical, self-paced API testing course with lessons, examples, and hands-on practice." />
+  <title>API testing Course | TestAtlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="courses-page">
+  <header class="topbar course-topbar">
+    <a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#topics">All courses</a><a href="index.html#library">Learning library</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+    <a class="button button-small" href="courses.html">Course catalog <span>?</span></a>
+  </header>
+  <main class="single-course-main">
+    <a class="course-back-link" href="courses.html">? Back to all courses</a>
+    <div class="course-list single-course-list"><article class="course-detail">
+        <img class="course-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85" alt="Server infrastructure representing API services" loading="lazy" />
+        <div class="course-body"><p class="kicker">03 / INTEGRATION · BEGINNER</p><h2>API testing</h2><p class="course-lead">Test the service contract directly: inputs, status codes, response data, authorization, and the edge cases that user interfaces may not expose.</p>
+          <div class="course-facts"><span>SELF-PACED</span><span>5 LESSONS</span><span>HTTP FUNDAMENTALS</span></div>
+          <h3>What you will learn</h3><ul><li>Read requests and responses using HTTP methods, headers, and bodies.</li><li>Validate status, schema, values, and important business rules.</li><li>Check authentication, authorization, and negative scenarios safely.</li><li>Keep test data isolated and make API checks repeatable.</li></ul>
+          <h3>Course lessons</h3>
+          <h4>1. Read the request and response</h4><p>An API request combines a method, URL, headers, and sometimes a body. GET commonly retrieves data, POST creates or triggers an action, PUT replaces a resource, PATCH updates part of one, and DELETE removes one. Inspect the status code, response headers, body, and timing. Use the service's documented contract as your baseline.</p>
+          <h4>2. Validate more than status</h4><p>A 200 response alone does not prove the operation is correct. Check that required fields exist, types and formats are valid, values match the request, and business rules hold. For a created resource, confirm its identifier and verify it can be retrieved. For errors, check that the response is safe, understandable, and consistent with the contract.</p>
+          <h4>3. Cover boundaries and failure paths</h4><p>Try missing fields, invalid formats, unknown identifiers, duplicate requests, unsupported methods, and values at documented limits. Check that the service rejects unauthorized requests and that one user cannot access another user's data. Use test accounts and approved environments; never probe systems you are not authorized to test.</p>
+          <h4>4. Make checks repeatable</h4><p>Keep environment URLs and credentials outside shared test files. Create unique data or reset fixtures so one run does not break the next. Avoid depending on a particular execution order. Record the request and response details needed to debug a failure, while masking tokens and personal data in logs.</p>
+          <h4>5. Practice: test a notes endpoint</h4><p>Using a local or approved practice API, create a note, validate its returned identifier and content, retrieve it, update one field, and delete it. Then repeat with missing content and an invalid identifier. For every operation, state the expected status, response shape, and side effect before sending the request.</p>
+          <aside class="course-callout"><strong>Takeaway</strong><p>Strong API tests verify the contract and the business outcome, including the cases where the service must refuse a request.</p></aside>
+        </div>
+      </article></div>
+    <section class="course-next"><p class="kicker">KEEP LEARNING</p><h2>Ready for another topic?</h2><a class="button" href="courses.html">Browse all courses <span>?</span></a><a class="button button-outline" href="index.html#library">Open free guides and templates <span>?</span></a></section>
+  </main>
+  <footer class="footer"><a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a><span>Practical QA learning, one step at a time.</span><div><a href="index.html#topics">Courses</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div><small>? 2026 TestAtlas</small></footer>
+</body>
+</html>

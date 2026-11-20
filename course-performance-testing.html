@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A practical, self-paced Performance testing course with lessons, examples, and hands-on practice." />
+  <title>Performance testing Course | TestAtlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="courses-page">
+  <header class="topbar course-topbar">
+    <a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#topics">All courses</a><a href="index.html#library">Learning library</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+    <a class="button button-small" href="courses.html">Course catalog <span>?</span></a>
+  </header>
+  <main class="single-course-main">
+    <a class="course-back-link" href="courses.html">? Back to all courses</a>
+    <div class="course-list single-course-list"><article class="course-detail">
+        <img class="course-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85" alt="Analytics dashboard for performance test results" loading="lazy" />
+        <div class="course-body"><p class="kicker">04 / PERFORMANCE · BEGINNER</p><h2>Performance testing</h2><p class="course-lead">Plan a realistic load experiment, choose measurements that matter, and turn the results into an actionable conversation about capacity and user experience.</p>
+          <div class="course-facts"><span>SELF-PACED</span><span>5 LESSONS</span><span>PLANNING AND ANALYSIS</span></div>
+          <h3>What you will learn</h3><ul><li>Distinguish load, stress, spike, and endurance testing.</li><li>Choose response-time, throughput, and error measurements.</li><li>Model realistic users and workloads from evidence.</li><li>Read results alongside infrastructure and application signals.</li></ul>
+          <h3>Course lessons</h3>
+          <h4>1. Start with a question</h4><p>Define the decision the test should inform: for example, whether a release can support expected peak traffic while meeting a response-time target. Agree on the environment, duration, workload, success criteria, and safety limits. Performance tests can affect shared services, so coordinate with owners and use an approved environment.</p>
+          <h4>2. Choose the right workload</h4><p>A load test models expected usage, a stress test explores limits, a spike test examines a sudden change, and an endurance test looks for degradation over time. Use production-like traffic patterns where permitted, including think time, a mix of actions, realistic data, and ramp-up. A single endpoint hammered at maximum speed rarely represents real user behavior.</p>
+          <h4>3. Measure the user experience</h4><p>Track response-time percentiles such as p50, p95, and p99 rather than relying only on averages. Also record throughput, error rate, saturation, and resource usage. Averages can conceal a slow experience for a meaningful share of users. Define thresholds before the run so the results are judged consistently.</p>
+          <h4>4. Run controlled experiments</h4><p>Establish a baseline, change one important condition at a time, and repeat runs when results are noisy. Keep application version, test data, and environment notes with the result. Correlate client-side timings with server, database, and dependency metrics. Separate a generator bottleneck from an application bottleneck before drawing conclusions.</p>
+          <h4>5. Practice: model a peak hour</h4><p>Sketch a small online store's peak-hour mix: browse products, search, view details, add to cart, and check out. Estimate the share and frequency of each action, define acceptable p95 response time and error rate, then design a gradual ramp-up and a stop condition. After a practice run, identify the slowest journey and propose the next experiment.</p>
+          <aside class="course-callout"><strong>Takeaway</strong><p>A useful performance test is a controlled experiment tied to a user-facing target, not just a large number of simulated requests.</p></aside>
+        </div>
+      </article></div>
+    <section class="course-next"><p class="kicker">KEEP LEARNING</p><h2>Ready for another topic?</h2><a class="button" href="courses.html">Browse all courses <span>?</span></a><a class="button button-outline" href="index.html#library">Open free guides and templates <span>?</span></a></section>
+  </main>
+  <footer class="footer"><a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a><span>Practical QA learning, one step at a time.</span><div><a href="index.html#topics">Courses</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div><small>? 2026 TestAtlas</small></footer>
+</body>
+</html>

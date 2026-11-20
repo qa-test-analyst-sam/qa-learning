@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A practical, self-paced Test automation course with lessons, examples, and hands-on practice." />
+  <title>Test automation Course | TestAtlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="courses-page">
+  <header class="topbar course-topbar">
+    <a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#topics">All courses</a><a href="index.html#library">Learning library</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+    <a class="button button-small" href="courses.html">Course catalog <span>?</span></a>
+  </header>
+  <main class="single-course-main">
+    <a class="course-back-link" href="courses.html">? Back to all courses</a>
+    <div class="course-list single-course-list"><article class="course-detail">
+        <img class="course-cover" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=85" alt="Code editor on a screen for learning test automation" loading="lazy" />
+        <div class="course-body"><p class="kicker">02 / AUTOMATION · BEGINNER TO INTERMEDIATE</p><h2>Test automation</h2><p class="course-lead">Learn where automation helps, how to build stable checks, and how to maintain a suite that gives the team useful feedback.</p>
+          <div class="course-facts"><span>SELF-PACED</span><span>5 LESSONS</span><span>TOOL-AGNOSTIC</span></div>
+          <h3>What you will learn</h3><ul><li>Choose suitable tests for automation based on repeatability and risk.</li><li>Separate test data, actions, and assertions so checks are readable.</li><li>Reduce flaky results with explicit waits and stable selectors.</li><li>Use failures as diagnostic feedback and maintain the suite over time.</li></ul>
+          <h3>Course lessons</h3>
+          <h4>1. Pick the right work to automate</h4><p>Automate checks that run often, have a clear expected result, and protect important behavior. Repeated regression checks, critical user journeys, and API contracts are common candidates. Keep one-off visual investigations, unclear requirements, and highly subjective evaluation in human hands until expectations become stable. Automation supports testing; it does not replace product judgment.</p>
+          <h4>2. Make checks readable</h4><p>Each test should explain the scenario and verify an outcome that matters to a user. Keep setup focused, use descriptive names, and avoid hiding many unrelated assertions inside one test. Reuse helpers for repeated actions, but make the test's intent visible without forcing readers to trace a large utility layer.</p>
+          <h4>3. Prefer stable interactions</h4><p>Use accessible roles, labels, and stable test identifiers instead of fragile selectors tied to layout or generated CSS. Wait for a meaningful state, such as a confirmation appearing, rather than sleeping for an arbitrary number of seconds. Isolate test data where possible and clean up created records so repeated runs do not depend on execution order.</p>
+          <h4>4. Understand failures and flakiness</h4><p>A failed check can indicate a product defect, a test defect, environment instability, or data collision. Capture useful logs, screenshots, and network details. Reproduce the failure and fix the underlying cause; routinely retrying until green can hide real regressions and teach the team to ignore alerts.</p>
+          <h4>5. Practice: automate a critical journey</h4><p>Choose a small sign-in or checkout flow. Write down its expected outcome first, then automate the shortest meaningful path and one failure path. Run the checks repeatedly, vary test data, and review whether the failure output explains what went wrong. Add the suite to a continuous integration run after it behaves consistently on a clean environment.</p>
+          <aside class="course-callout"><strong>Takeaway</strong><p>Measure automation by the quality of feedback it gives, not by the number of scripts in the repository.</p></aside>
+        </div>
+      </article></div>
+    <section class="course-next"><p class="kicker">KEEP LEARNING</p><h2>Ready for another topic?</h2><a class="button" href="courses.html">Browse all courses <span>?</span></a><a class="button button-outline" href="index.html#library">Open free guides and templates <span>?</span></a></section>
+  </main>
+  <footer class="footer"><a class="logo" href="index.html"><span class="logo-mark">T</span> testatlas<span class="logo-dot">.</span></a><span>Practical QA learning, one step at a time.</span><div><a href="index.html#topics">Courses</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div><small>? 2026 TestAtlas</small></footer>
+</body>
+</html>
