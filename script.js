@@ -106,3 +106,50 @@ chatForm.addEventListener('submit', event => {
 document.querySelectorAll('.quick-replies button').forEach(button => button.addEventListener('click', () => submitChat(button.dataset.question)))
 
 document.querySelector('#year')?.replaceChildren(String(new Date().getFullYear()))
+
+const heroSlider = document.querySelector('#home-slider')
+if (heroSlider) {
+  const slides = [...heroSlider.querySelectorAll('.hero-slide')]
+  const dots = [...heroSlider.querySelectorAll('[data-go-to]')]
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  let activeSlide = 0
+  let timer
+
+  function showSlide(index) {
+    activeSlide = (index + slides.length) % slides.length
+    slides.forEach((slide, i) => {
+      const active = i === activeSlide
+      slide.classList.toggle('is-active', active)
+      slide.setAttribute('aria-hidden', String(!active))
+    })
+    dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === activeSlide)))
+  }
+
+  function stopRotation() {
+    window.clearInterval(timer)
+  }
+
+  function startRotation() {
+    stopRotation()
+    if (!reducedMotion && !document.hidden && !heroSlider.matches(':hover, :focus-within')) {
+      timer = window.setInterval(() => showSlide(activeSlide + 1), 7000)
+    }
+  }
+
+  heroSlider.querySelectorAll('[data-direction]').forEach(button => button.addEventListener('click', () => {
+    showSlide(activeSlide + (button.dataset.direction === 'next' ? 1 : -1))
+    startRotation()
+  }))
+  dots.forEach(dot => dot.addEventListener('click', () => {
+    showSlide(Number(dot.dataset.goTo))
+    startRotation()
+  }))
+  heroSlider.addEventListener('mouseenter', stopRotation)
+  heroSlider.addEventListener('mouseleave', startRotation)
+  heroSlider.addEventListener('focusin', stopRotation)
+  heroSlider.addEventListener('focusout', event => {
+    if (!heroSlider.contains(event.relatedTarget)) startRotation()
+  })
+  document.addEventListener('visibilitychange', startRotation)
+  startRotation()
+}
